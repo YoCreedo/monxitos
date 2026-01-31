@@ -391,8 +391,10 @@ function playWindowsBackground() {
 }
 
 let dpt = null, isOnDp = false;
-$('#dp')[0].onmouseover = () => { isOnDp = true };
-$('#dp')[0].onmouseleave = () => { isOnDp = false; hidedp() };
+if ($('#dp').length > 0 && $('#dp')[0]) {
+    $('#dp')[0].onmouseover = () => { isOnDp = true };
+    $('#dp')[0].onmouseleave = () => { isOnDp = false; hidedp() };
+}
 function showdp(e, cl, arg) {
     if ($('#dp').hasClass('show-begin')) {
         $('#dp').removeClass('show');

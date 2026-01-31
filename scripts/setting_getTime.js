@@ -1,9 +1,9 @@
-//设置页面时间获取逻辑  @Junchen Yi  2023-9-17
+// Set the page time acquisition logic  @Junchen Yi  2023-9-17
 
-// 获取具有class="settingTime"的元素
+// Get the element with class="settingTime"
 const settingTimeElement = document.querySelector('.settingTime');
 
-// 更新时间函数
+// Update time function
 function updateTime() {
     const now = new Date();
     const hours = now.getHours();
@@ -13,19 +13,21 @@ function updateTime() {
     let timeOfDay = '';
 
     if (hours < 12) {
-        timeOfDay = '上午';
+        timeOfDay = 'Morning';
     } else if (hours < 18) {
-        timeOfDay = '下午';
+        timeOfDay = 'Afternoon';
     } else {
-        timeOfDay = '晚上';
+        timeOfDay = 'Evening';
     }
 
-    // 将时间注入到HTML元素内
-    settingTimeElement.textContent = `${timeOfDay} ${hours}:${minutes}:${seconds}`;
+    // Inject time into the HTML element if it exists
+    if (settingTimeElement) {
+        settingTimeElement.textContent = `${timeOfDay} ${hours}:${minutes}:${seconds}`;
+    }
 }
 
-// 初始加载时更新时间
+// Initial update
 updateTime();
 
-// 每秒钟更新一次时间
+// Update every second
 setInterval(updateTime, 1000);
