@@ -1813,7 +1813,6 @@ let apps = {
                 apps.explorer.goto($('#win-explorer>.path>.tit')[0].dataset.path, false);
 
             }
-            delete elements;
             apps.explorer.is_use2 = apps.explorer.is_use;
             var elements = document.querySelectorAll('#win-explorer>.page>.main>.content>.view>.select');
             for (var i = 0; i < elements.length; i++) {
