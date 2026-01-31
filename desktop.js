@@ -3589,16 +3589,21 @@ function dragBrightness(e) {
 // 控制面板 电量监测
 try {
     navigator.getBattery().then((battery) => {
-        $('.a.dock.control>svg>path')[0].outerHTML = `<path
-            d="M 4 7 C 2.3550302 7 1 8.3550302 1 10 L 1 19 C 1 20.64497 2.3550302 22 4 22 L 24 22 C 25.64497 22 27 20.64497 27 19 L 27 10 C 27 8.3550302 25.64497 7 24 7 L 4 7 z M 4 9 L 24 9 C 24.56503 9 25 9.4349698 25 10 L 25 19 C 25 19.56503 24.56503 20 24 20 L 4 20 C 3.4349698 20 3 19.56503 3 19 L 3 10 C 3 9.4349698 3.4349698 9 4 9 z M 5 11 L 5 18 L ${18 * battery.level + 5} 18 L ${18 * battery.level + 5} 11 L 5 11 z M 28 12 L 28 17 L 29 17 C 29.552 17 30 16.552 30 16 L 30 13 C 30 12.448 29.552 12 29 12 L 28 12 z"
-            id="path2" fill="#000000"
-        />`;
-
-        battery.addEventListener('levelchange', () => {
-            $('.a.dock.control>svg>path')[0].outerHTML = `<path
+        const batteryPath = $('.a.dock.control>svg>path')[0];
+        if (batteryPath) {
+            batteryPath.outerHTML = `<path
                 d="M 4 7 C 2.3550302 7 1 8.3550302 1 10 L 1 19 C 1 20.64497 2.3550302 22 4 22 L 24 22 C 25.64497 22 27 20.64497 27 19 L 27 10 C 27 8.3550302 25.64497 7 24 7 L 4 7 z M 4 9 L 24 9 C 24.56503 9 25 9.4349698 25 10 L 25 19 C 25 19.56503 24.56503 20 24 20 L 4 20 C 3.4349698 20 3 19.56503 3 19 L 3 10 C 3 9.4349698 3.4349698 9 4 9 z M 5 11 L 5 18 L ${18 * battery.level + 5} 18 L ${18 * battery.level + 5} 11 L 5 11 z M 28 12 L 28 17 L 29 17 C 29.552 17 30 16.552 30 16 L 30 13 C 30 12.448 29.552 12 29 12 L 28 12 z"
                 id="path2" fill="#000000"
             />`;
+        }
+        battery.addEventListener('levelchange', () => {
+            const batteryPathUpdate = $('.a.dock.control>svg>path')[0];
+            if (batteryPathUpdate) {
+                batteryPathUpdate.outerHTML = `<path
+                    d="M 4 7 C 2.3550302 7 1 8.3550302 1 10 L 1 19 C 1 20.64497 2.3550302 22 4 22 L 24 22 C 25.64497 22 27 20.64497 27 19 L 27 10 C 27 8.3550302 25.64497 7 24 7 L 4 7 z M 4 9 L 24 9 C 24.56503 9 25 9.4349698 25 10 L 25 19 C 25 19.56503 24.56503 20 24 20 L 4 20 C 3.4349698 20 3 19.56503 3 19 L 3 10 C 3 9.4349698 3.4349698 9 4 9 z M 5 11 L 5 18 L ${18 * battery.level + 5} 18 L ${18 * battery.level + 5} 11 L 5 11 z M 28 12 L 28 17 L 29 17 C 29.552 17 30 16.552 30 16 L 30 13 C 30 12.448 29.552 12 29 12 L 28 12 z"
+                    id="path2" fill="#000000"
+                />`;
+            }
         });
     });
 } catch (TypeError) {
@@ -3625,11 +3630,14 @@ function ch(e) {
     $('#desktop>.choose').css('top', Math.min(chstY, e.clientY));
     $('#desktop>.choose').css('height', Math.abs(e.clientY - chstY));
 }
-$('#desktop')[0].addEventListener('mousedown', e => {
-    chstX = e.clientX;
-    chstY = e.clientY;
-    this.onmousemove = ch;
-})
+const desktopElem = $('#desktop')[0];
+if (desktopElem) {
+    desktopElem.addEventListener('mousedown', e => {
+        chstX = e.clientX;
+        chstY = e.clientY;
+        this.onmousemove = ch;
+    });
+}
 window.addEventListener('mouseup', e => {
     this.onmousemove = null;
     $('#desktop>.choose').css('left', 0);
@@ -3637,7 +3645,7 @@ window.addEventListener('mouseup', e => {
     $('#desktop>.choose').css('display', 'none');
     $('#desktop>.choose').css('width', 0);
     $('#desktop>.choose').css('height', 0);
-})
+});
 let isDrak = false;
 
 // 主题
