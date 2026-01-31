@@ -1,123 +1,70 @@
-# Windows 12 网页版
-
-> **🎉🎉Windows 12 网页版一周岁生日快乐！`o(^o^)o`**
-> **向在座的各位的支持表示诚挚的感谢！**
-
-```
-千古有冬夏，一载经春秋。破浪长风扶摇起，夜深星源起处。
-天涯何处觅知音，春秋冬夏君相昔。
-一路有你，纵冰塞黄河，雪满太行，不畏，丈夫未可轻年少。
-愿我如星君如月，夜夜流光相皎洁。
-
-感念一年来大家的支持与鼓励，批评和建议。
-Windows 12 的明天在大家的努力下会更灿烂美好！
-————星源 23/8/28
-```
-
----
-
-> 作者今年初三了，不会做什么功能的更新了。维护和继续开发交给我们的 @User782Tec，详见 [公告](https://github.com/tjy-gitnub/win12/wiki/%E5%85%AC%E5%91%8A-Notices)。
-
-```
-寒窗苦读九春秋，一朝定乾坤。
-山岭越尽云雾散，霞光终万道。
-待蟾折桂题金榜，再叙一载过往！
-后会有期，明年再见，各位朋友，洒家告辞！
-————星源 23/8/30
-```
-
----
-
-> 🎉🎉项目在 GitHub 上突破✨3.6k✨stars✨啦！芜湖🎊🎈`o(^o^)o`
-> 向在座的各位的支持表示诚挚的感谢！
-
----
-
-- [Windows 12 网页版](#windows-12-网页版)
-  - [前前言](#前前言)
-  - [前言](#前言)
-    - [特别感谢](#特别感谢)
-  - [效果展示](#效果展示)
-  - [在线体验](#在线体验)
-  - [安装和使用](#安装和使用)
-  - [前景规划](#前景规划)
-  - [开源说明](#开源说明)
-  - [贡献须知](#贡献须知)
-
-## 前前言
-
-最近（不久之前）看到有一些冒充我们的，在此做个声明：
-
-我们项目是由 tjy-gitnub（初三），NB-group（预备），782（初一），三位开发者共同开发的！
-
-我们只在 GitHub、Bilibili 和爱发电上有官方账号！
-
-GitHub：
-
-去贡献者里看一下吧~
-
-Bilibili：
-
 tjy-gitnub：
 
-![image](https://github.com/tjy-gitnub/win12/assets/121747915/6b13f81a-2a33-4265-abee-44c3796c2817)
+# Monxit OS Web Edition
 
-NB-group：
+Welcome to the Monxit OS Web Edition! This project is an open-source, browser-based desktop OS simulation inspired by modern operating systems. It features a beautiful UI, smooth animations, and a growing set of apps and features—all running in your browser.
 
-![image](https://github.com/tjy-gitnub/win12/assets/121747915/9dad6cac-e0e7-44b3-975e-41eaf33520dd)
+---
 
-782：
+## Live Demo
 
-![image](https://github.com/tjy-gitnub/win12/assets/121747915/e475890f-010d-4e47-9ac6-fd4abad26218)
+Try it online: (add your GitHub Pages link here after deployment)
 
-爱发电：
+---
 
-全世界唯一可以捐款的官方账号！擦亮你的双眼！不要给其他人捐款！
+## Features
 
-![image](https://github.com/tjy-gitnub/win12/assets/121747915/c4a7e71c-ac41-4ab5-ba87-967d188ca2cc)
+- Desktop environment with draggable windows
+- File Explorer, Notepad, and more built-in apps
+- Customizable themes and dark mode
+- App Store (Monxit Store) for more apps
+- Dynamic wallpapers
+- Widget support
+- Simulated file system
+- Modern, responsive design
 
-链接：https://afdian.net/a/qstudio?tab=feed
+---
 
-**我们的项目及源代码绝对不进行强制收费！如果看到售卖本项目且没有注明原项目链接的，或违反EPL-2.0开源协议及本项目开源说明的，欢迎举报！**
+## Getting Started
 
-## 前言
+1. **Clone or download this repository.**
+2. Open `desktop.html` in your browser.
+3. Enjoy Monxit OS in your browser—no installation required!
 
-最近（很久以前）看到 Windows 12 概念版（Powered by PowerPoint）后深受启发，决定做一个 Windows 12 网页版，就像 [Windows 11 网页版](https://win11.blueedge.me/) 一样。
+---
 
-参考 [前景规划](#前景规划)。
+## Roadmap
 
-精美的 ui 设计，流畅丰富的动画，各种高级的功能（相较于网页版）。
+- [x] Core desktop and window management
+- [x] File system and file explorer
+- [x] Notepad and basic apps
+- [x] App Store (Monxit Store)
+- [x] Dynamic wallpapers
+- [ ] More customization options
+- [ ] More built-in and third-party apps
+- [ ] Improved mobile support
+- [ ] Executable file support
+- [ ] More widgets
 
-> 移动端适配不太完善，开桌面版网站凑合着用吧 `>v-)o`
+---
 
-### 特别感谢
+## Contributing
 
-特别感谢以下赞助者:
+Contributions are welcome! Please see [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines.
 
-- CursoR_光标（<https://afdian.net/a/cursor>）
-- Baymax（<https://afdian.net/u/a131cd504dea11eeb6be5254001e7c00>）
+---
 
-在此对以上赞助者表示公开鸣谢！
+## License
 
-## 效果展示
+This project is licensed under the EPL v2.0. See [LICENSE](./LICENSE) for details.
 
-> 新的版本有很多变化，仅供参考，请以实物为准（你点一下 [这里](https://tjy-gitnub.github.io/win12/desktop.html) 就知道了啊，不麻烦`-_-)o` ）
+---
 
-![image](https://tjy-gitnub.github.io/win12/img/start-menu.png)
+## Credits
 
-*开始菜单*
+Original inspiration: [win12](https://github.com/tjy-gitnub/win12) and [win11.blueedge.me](https://win11.blueedge.me/)
 
-![image](https://tjy-gitnub.github.io/win12/img/colorful-apps.png)
-
-*丰富的应用*
-
-![image](https://tjy-gitnub.github.io/win12/img/dark-mode.png)
-
-*深色模式*
-
-![image](https://tjy-gitnub.github.io/win12/img/ai-copilot.png)
-
-*AI Copilot*
+Monxit OS is a community-driven project. Thanks to all contributors and users!
 
 ## 在线体验
 

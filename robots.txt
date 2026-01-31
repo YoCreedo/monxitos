@@ -1,33 +1,34 @@
 User-agent: *
 
-# 若想要让搜索引擎爬取以下目录，请注释掉相应的索引规则
 
-# 外部数据文件：不允许搜索引擎爬取外部数据文件，以保护敏感数据
-Disallow: /data/  # 阻止搜索引擎访问外部数据文件
+# If you want search engines to crawl these directories, comment out the corresponding rules below.
 
-# 应用程序：不允许搜索引擎爬取应用程序相关的内容
-Disallow: /apps/  # 阻止搜索引擎访问应用程序目录
+# External data files: Prevent search engines from accessing sensitive data files
+Disallow: /data/  # Block search engines from external data files
 
-# GitHub相关：不允许搜索引擎爬取与GitHub相关的内容
-Disallow: /.github/  # 阻止搜索引擎访问GitHub相关内容
+# Applications: Prevent search engines from crawling app-related content
+Disallow: /apps/  # Block search engines from app directory
 
-# 模块：不允许搜索引擎爬取模块文件，以保护代码逻辑
-Disallow: /module/  # 阻止搜索引擎访问模块文件
+# GitHub related: Prevent search engines from crawling GitHub-related content
+Disallow: /.github/  # Block search engines from GitHub content
 
-# 渐进式Web应用：不允许搜索引擎爬取PWA相关内容
-Disallow: /pwa/  # 阻止搜索引擎访问PWA相关内容
+# Modules: Prevent search engines from crawling module files to protect code logic
+Disallow: /module/  # Block search engines from module files
 
-# JavaScript文件：不允许搜索引擎爬取JavaScript文件
-Disallow: /scripts/  # 阻止搜索引擎访问JavaScript文件
+# Progressive Web App: Prevent search engines from crawling PWA content
+Disallow: /pwa/  # Block search engines from PWA content
 
-# 字体文件：不允许搜索引擎爬取字体文件
-Disallow: /fonts/  # 阻止搜索引擎访问字体文件
+# JavaScript files: Prevent search engines from crawling JavaScript files
+Disallow: /scripts/  # Block search engines from JavaScript files
 
-# 图像文件：不允许搜索引擎爬取图像文件
-Disallow: /icon/  # 阻止搜索引擎访问图像文件
+# Fonts: Prevent search engines from crawling font files
+Disallow: /fonts/  # Block search engines from font files
 
-# 图片文件：不允许搜索引擎爬取图片文件
-Disallow: /img/  # 阻止搜索引擎访问图片文件
+# Icons: Prevent search engines from crawling icon files
+Disallow: /icon/  # Block search engines from icon files
 
-# 音频文件：不允许搜索引擎爬取音频文件
-Disallow: /media/  # 阻止搜索引擎访问音频文件
+# Images: Prevent search engines from crawling image files
+Disallow: /img/  # Block search engines from image files
+
+# Audio files: Prevent search engines from crawling audio files
+Disallow: /media/  # Block search engines from audio files
