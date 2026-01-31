@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Monxit OS Update</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- 优化：添加 viewport meta 标签，确保在移动设备上的适配性 -->
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            user-select: none;
+            scrollbar-width: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -o-user-select: none;
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+
+        body {
+            background: linear-gradient(120deg, #0b0f1a, #181f2a 80%);
+            color: #e5e7eb;
+            cursor: none;
+            min-height: 100vh;
+        }
+
+        .loading {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10vh;
+        }
+
+        .monxit-logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 18px;
+            background: linear-gradient(135deg, #4f9cff 60%, #2563eb 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 32px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+            font-size: 48px;
+            color: #fff;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .progress-bar {
+            width: 220px;
+            height: 18px;
+            background: rgba(255,255,255,0.08);
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 18px 0 8px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+        }
+        .progress {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #4f9cff, #2563eb);
+            border-radius: 12px;
+            transition: width 1.2s cubic-bezier(.4,2,.6,1);
+        }
+        .update-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+        .update-desc {
+            font-size: 1rem;
+            opacity: 0.8;
+            margin-bottom: 18px;
+        }
+        .setup-hint {
+            text-align: center;
+            color: #a1a1aa;
+            font-size: 0.95rem;
+            margin-top: 32px;
+        }
+    </style>
+</head>
+<body>
+    <div class="loading">
+        <div class="monxit-logo">M</div>
+        <div class="update-title">Monxit OS Update</div>
+        <div class="update-desc">Preparing your system for the latest Monxit OS experience...</div>
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+        <div id="progress-label" style="font-size:1rem;opacity:0.7;">Starting update...</div>
+        <div class="setup-hint">Press F2 or touch screen to enter SETUP</div>
+    </div>
+    <script>
+        // Fake progress animation
+        const progress = document.getElementById('progress');
+        const label = document.getElementById('progress-label');
+        let percent = 0;
+        const steps = [
+            {p: 10, t: 'Checking for updates...'},
+            {p: 30, t: 'Downloading update...'},
+            {p: 60, t: 'Installing Monxit OS...'},
+            {p: 85, t: 'Finalizing...'},
+            {p: 100, t: 'Update complete!'}
+        ];
+        let i = 0;
+        function nextStep() {
+            if (i >= steps.length) return;
+            percent = steps[i].p;
+            progress.style.width = percent + '%';
+            label.textContent = steps[i].t;
+            i++;
+            if (percent < 100) setTimeout(nextStep, 1200);
+        }
+        setTimeout(nextStep, 800);
+    </script>
+</body>
+</html>
