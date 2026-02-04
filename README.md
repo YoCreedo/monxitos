@@ -8,7 +8,7 @@ Welcome to the Monxit OS Web Edition! This project is an open-source, browser-ba
 
 ## Live Demo
 
-Try it online: (add your GitHub Pages link here after deployment)
+Try it online: <https://tjy-gitnub.github.io/win12/desktop.html>
 
 ---
 
